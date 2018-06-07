@@ -1,0 +1,5 @@
+django_celery=3.2.2
+django_cors_headers==2.1.0
+virtualenv==15.1.0
+gunicorn==19.7.1
+
