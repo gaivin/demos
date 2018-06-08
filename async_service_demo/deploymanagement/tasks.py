@@ -4,12 +4,12 @@ from time import sleep
 
 @shared_task(name="DeployAVE")
 def deploy_ave(ip="10.98.137.54"):
-    sleep(5)
+    sleep(120)
     return ip
 
 
 @shared_task(name="DeployAvamar")
 def deploy_ads(ip="10.98.137.53"):
-    sleep(5)
+    sleep(60)
     return ip
 

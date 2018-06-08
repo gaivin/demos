@@ -7,6 +7,18 @@ from .logger import get_logger
 logger = get_logger(__name__)
 
 
+def get_task_info(task_id):
+    try:
+        tasks_status = TaskState.objects.get(task_id=task_id)
+        status_fields = ['state', 'task_id', 'name', 'args', 'kwargs','result',
+                         'eta', 'runtime', 'worker', 'tstamp', 'traceback']
+        task_status_dict = model_to_dict(tasks_status, fields=status_fields)
+    except ObjectDoesNotExist as ex:
+        logger.error("Cannot found the task [%s] in TaskState table. Error; %s" % (task_id, ex.message))
+        task_status_dict = {}
+
+    return task_status_dict
+
 def get_task_details_by_id(task_id, task_details=None, with_sub_task=True, update_parent_task_status=True):
     if task_details is None:
         task_details = []
