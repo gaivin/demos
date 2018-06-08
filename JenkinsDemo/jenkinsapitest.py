@@ -1,3 +1,18 @@
+
+#!/usr/bin/env python
+# encoding: utf-8
+
+"""
+@version: v1.0
+@author: Gaivin Wang
+@license: Apache Licence
+@contact: gaivin@outlook.com
+@site: https://github.com/gaivin/
+@software: PyCharm
+@file: test.py
+@time: 6/1/2018 3:43 PM
+"""
+
 # Reference  https://www.jianshu.com/p/8fda9e96addd
 
 
